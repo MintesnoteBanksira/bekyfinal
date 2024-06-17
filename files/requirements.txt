@@ -1,0 +1,9 @@
+tensorflow==2.12.0
+fastapi
+numpy
+nltk
+fuzzywuzzy
+joblib
+asyncio
+requests
+rasa
