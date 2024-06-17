@@ -8,8 +8,8 @@ ENV PYTHONUNBUFFERED 1
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Copy the Django project directory into the container at /app
+COPY bekyDjango/ /app
 
 # Upgrade pip and setuptools, and install any needed packages specified in requirements.txt
 RUN pip install --upgrade pip setuptools && \
