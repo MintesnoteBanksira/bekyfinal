@@ -11,8 +11,9 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Upgrade pip and setuptools, and install any needed packages specified in requirements.txt
+RUN pip install --upgrade pip setuptools && \
+    pip install --no-cache-dir -r requirements.txt --verbose
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
