@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: bekyDjango
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn bekyDjango.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: bekyDjango.settings
+    autoDeploy: true
+    build:
+      image: python:3.9-slim
+      commands:
+        - pip install --upgrade pip
+        - pip install -r requirements.txt
