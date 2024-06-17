@@ -1,0 +1,7 @@
+rasa
+django
+django-cors-headers
+djangorestframework
+nltk
+fuzzywuzzy
+python-Levenshtein
